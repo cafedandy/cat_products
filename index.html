@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🐱 ねこ STORE - 猫グッズ専門店</title>
+<meta name="description" content="猫を飼い始める方から上級者まで必見！キャットフード・猫砂・キャットタワー・猫用おもちゃ・ヘルスケア用品など猫グッズを8カテゴリで完全網羅。楽天市場の人気商品を厳選してご紹介。猫用品をまとめてチェックするならねこSTOREへ。">
+<meta name="keywords" content="猫グッズ,猫用品,キャットフード,猫砂,キャットタワー,猫おもちゃ,猫ベッド,猫キャリー,猫ヘルスケア,猫の服,猫雑貨,ねこ,猫飼い,猫用品通販,猫 おすすめ,猫 初心者,楽天 猫グッズ">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=Kaisei+Decol:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #1A1F3C; --navy-mid: #252B4A;
+    --lavender: #8B8FD4; --lilac: #C5C7F0;
+    --cream: #FDF8F5; --warm-white: #FFFCFA;
+    --gold: #E8B86D; --rose: #E07899; --mint: #7EC8C8;
+    --text: #1A1F3C; --muted: #6B6F9A;
+  }
+  body { font-family: 'Zen Maru Gothic', sans-serif; background: var(--cream); color: var(--text); overflow-x: hidden; }
+  header { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #2D2060 100%); position: relative; overflow: hidden; }
+  .header-stars { position: absolute; inset: 0; background-image: radial-gradient(circle at 15% 30%, rgba(197,199,240,0.15) 0%, transparent 40%), radial-gradient(circle at 85% 70%, rgba(232,184,109,0.12) 0%, transparent 40%); }
+  .header-stars::before { content: '✦ ✧ ✦ ✧ ✦'; position: absolute; top: 14px; right: 2rem; font-size: 10px; color: rgba(197,199,240,0.4); letter-spacing: 0.5rem; }
+  .header-inner { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; padding: 3rem 2rem 2.5rem; display: flex; align-items: center; gap: 2rem; }
+  .cat-logo { font-size: 5rem; line-height: 1; filter: drop-shadow(0 4px 16px rgba(197,199,240,0.4)); flex-shrink: 0; animation: float 4s ease-in-out infinite; }
+  @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+  .header-text h1 { font-family: 'Kaisei Decol', serif; font-size: clamp(2.2rem,5vw,3.5rem); font-weight: 700; color: var(--lilac); text-shadow: 0 2px 16px rgba(139,143,212,0.5); line-height: 1.1; }
+  .header-text h1 span { color: var(--gold); }
+  .header-text p { font-size: 0.88rem; color: rgba(255,255,255,0.65); margin-top: 0.75rem; letter-spacing: 0.05em; }
+  .header-badges { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }
+  .badge { background: rgba(197,199,240,0.15); border: 1px solid rgba(197,199,240,0.3); color: var(--lilac); font-size: 0.7rem; padding: 0.25rem 0.75rem; border-radius: 100px; }
+  .priority-banner { background: linear-gradient(90deg, #2D1B69, #1A1F3C); border-bottom: 2px solid rgba(197,199,240,0.2); }
+  .priority-banner-inner { max-width: 1200px; margin: 0 auto; padding: 0.6rem 1.5rem; display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+  .priority-label { background: var(--gold); color: var(--navy); font-size: 0.65rem; font-weight: 900; padding: 0.2rem 0.7rem; border-radius: 100px; white-space: nowrap; }
+  .priority-text { font-size: 0.72rem; color: rgba(197,199,240,0.8); }
+  .nav-tabs { background: var(--navy-mid); display: flex; justify-content: center; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 16px rgba(26,31,60,0.3); }
+  .nav-tab { padding: 0.7rem 1.1rem; font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.55); cursor: pointer; transition: all 0.2s; border-bottom: 3px solid transparent; white-space: nowrap; }
+  .nav-tab:hover { color: #fff; background: rgba(255,255,255,0.06); }
+  .nav-tab.active { color: var(--lilac); border-bottom-color: var(--lavender); }
+  main { max-width: 1200px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
+  .section-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.75rem; margin-top: 3.5rem; flex-wrap: wrap; }
+  .section-header:first-child { margin-top: 0; }
+  .section-emoji { font-size: 2rem; flex-shrink: 0; }
+  .section-title-text h2 { font-family: 'Kaisei Decol', serif; font-size: 1.5rem; font-weight: 700; color: var(--navy); }
+  .section-title-text p { font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; }
+  .section-line { flex: 1; min-width: 40px; height: 2px; background: linear-gradient(to right, var(--lavender), transparent); border-radius: 2px; }
+  .priority-badge { background: linear-gradient(90deg, var(--gold), #f0c040); color: var(--navy); font-size: 0.6rem; font-weight: 900; padding: 0.2rem 0.7rem; border-radius: 100px; white-space: nowrap; }
+  .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1.1rem; }
+  .product-card { background: var(--warm-white); border-radius: 18px; overflow: hidden; box-shadow: 0 2px 12px rgba(26,31,60,0.07); transition: transform 0.25s, box-shadow 0.25s; display: flex; flex-direction: column; border: 1px solid rgba(197,199,240,0.2); }
+  .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 32px rgba(61,74,138,0.15); }
+  .product-img-area { background: linear-gradient(135deg,#F0F0FF,#FAF0FF); height: 160px; display: flex; align-items: center; justify-content: center; font-size: 5rem; position: relative; border-bottom: 1px dashed rgba(139,143,212,0.2); }
+  .product-label { position: absolute; top: 8px; left: 8px; color: #fff; font-size: 0.62rem; font-weight: 900; padding: 0.18rem 0.55rem; border-radius: 100px; }
+  .lbl-default { background: var(--lavender); }
+  .lbl-food { background: var(--gold); color: var(--navy); }
+  .lbl-health { background: var(--mint); color: var(--navy); }
+  .lbl-clothes { background: var(--rose); }
+  .lbl-room { background: #6BBF8F; }
+  .lbl-toilet { background: #7EC8C8; color: var(--navy); }
+  .product-info { padding: 0.9rem 1rem 0.7rem; flex: 1; display: flex; flex-direction: column; }
+  .product-name { font-weight: 700; font-size: 0.87rem; line-height: 1.45; color: var(--navy); flex: 1; }
+  .product-desc { font-size: 0.73rem; color: var(--muted); margin-top: 0.35rem; line-height: 1.6; }
+  .product-price { font-family: 'Kaisei Decol', serif; font-size: 1.15rem; font-weight: 700; color: #C0392B; margin-top: 0.5rem; }
+  .product-price span { font-size: 0.68rem; color: var(--muted); font-family: 'Zen Maru Gothic', sans-serif; font-weight: 400; }
+  .btn-group { display: flex; gap: 0.45rem; padding: 0.65rem 1rem 0.9rem; border-top: 1px dashed rgba(139,143,212,0.2); }
+  .btn-buy { flex: 1; padding: 0.5rem 0.4rem; border-radius: 9px; border: none; font-family: 'Zen Maru Gothic', sans-serif; font-size: 0.7rem; font-weight: 700; cursor: pointer; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.25rem; transition: all 0.2s; }
+  .btn-rakuten { background: #BF0000; color: #fff; }
+  .btn-rakuten:hover { background: #990000; transform: scale(1.03); }
+  .btn-amazon { background: #FF9900; color: #1a1a1a; }
+  .btn-amazon:hover { background: #E68A00; transform: scale(1.03); }
+  .cat-divider { text-align: center; margin: 2.5rem 0 0; font-size: 1.3rem; letter-spacing: 0.5rem; opacity: 0.2; }
+  footer { background: var(--navy); color: rgba(255,255,255,0.55); text-align: center; padding: 2rem; font-size: 0.75rem; line-height: 2; }
+  footer a { color: var(--lilac); text-decoration: none; }
+  .fade-in { opacity: 0; transform: translateY(14px); transition: opacity 0.5s ease, transform 0.5s ease; }
+  .fade-in.visible { opacity: 1; transform: none; }
+  @media (max-width:650px) {
+    .header-inner { flex-direction: column; text-align: center; }
+    .header-badges { justify-content: center; }
+    .product-grid { grid-template-columns: 1fr 1fr; }
+    .nav-tab { padding: 0.6rem 0.7rem; font-size: 0.68rem; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="header-stars"></div>
+  <div class="header-inner">
+    <div class="cat-logo">🐱</div>
+    <div class="header-text">
+      <h1>ねこ <span>STORE</span></h1>
+      <p>猫を育てるのに必要な全グッズをご紹介！フードからお部屋づくりまで完全網羅</p>
+      <div class="header-badges">
+        <span class="badge">楽天対応</span>
+        <span class="badge">8カテゴリ・全商品リンクあり</span>
+        <span class="badge">猫を飼いはじめる方にもおすすめ</span>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="priority-banner">
+  <div class="priority-banner-inner">
+    <span class="priority-label">⭐ 購入率TOP5</span>
+    <span class="priority-text">フード → トイレ → キャリー → ベッド・部屋 → おもちゃ の順で最初に揃えましょう！</span>
+  </div>
+</div>
+<nav class="nav-tabs">
+  <div class="nav-tab active" onclick="goTo('food')">🍽️ フード</div>
+  <div class="nav-tab" onclick="goTo('toilet')">🚽 トイレ</div>
+  <div class="nav-tab" onclick="goTo('carrier')">🧳 キャリー</div>
+  <div class="nav-tab" onclick="goTo('bed')">🏠 ベッド・部屋</div>
+  <div class="nav-tab" onclick="goTo('toy')">🪀 おもちゃ</div>
+  <div class="nav-tab" onclick="goTo('clothes')">👗 猫の服</div>
+  <div class="nav-tab" onclick="goTo('health')">💊 ヘルスケア</div>
+  <div class="nav-tab" onclick="goTo('goods')">🧸 雑貨</div>
+</nav>
+<main>
+<!-- ① フード -->
+<div id="food">
+  <div class="section-header fade-in">
+    <div class="section-emoji">🍽️</div>
+    <div class="section-title-text">
+      <h2>フード・おやつ・食器</h2>
+      <p>総合栄養食・ウェットフード・おやつ・給水器・食器まで猫の食事を完全サポート</p>
+    </div>
+    <span class="priority-badge">購入率 No.1</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="product-grid">
+    <div class="product-card fade-in">
+      <div class="product-img-area" style="background:linear-gradient(135deg,#FFF8E8,#FFF0E8);">🥩<div class="product-label lbl-food">定番</div></div>
+      <div class="product-info">
+        <div class="product-name">ロイヤルカナン 成猫用 ドライフード 2kg</div>
+        <div class="product-desc">獣医師も推奨する総合栄養食。消化に優れ毛並みもきれいに。</div>
+        <div class="product-price">¥3,200 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%25AD%25E3%2582%25A4%25E3%2583%25A4%25E3%2583%25AB%25E3%2582%25AB%25E3%2583%258A%25E3%2583%25B3%2B%25E6%2588%2590%25E7%258C%25AB%2B%25E3%2583%2589%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2595%25E3%2583%25BC%25E3%2583%2589%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area" style="background:linear-gradient(135deg,#FFF8E8,#FFF0E8);">🐟<div class="product-label lbl-food">大人気</div></div>
+      <div class="product-info">
+        <div class="product-name">ちゅーる まぐろバラエティパック 50本</div>
+        <div class="product-desc">猫が大好きなちゅーる！まぐろ・かつお・ほたてなど5フレーバー。</div>
+        <div class="product-price">¥1,980 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2581%25A1%25E3%2582%2585%25E3%2583%25BC%25E3%2582%258B%2B50%25E6%259C%25AC%2B%25E3%2583%2590%25E3%2583%25A9%25E3%2582%25A8%25E3%2583%2586%25E3%2582%25A3%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area" style="background:linear-gradient(135deg,#FFF8E8,#FFF0E8);">🫙<div class="product-label lbl-food">水分補給</div></div>
+      <div class="product-info">
+        <div class="product-name">ウェットフード 缶詰 24缶セット</div>
+        <div class="product-desc">水分補給にもなるウェットフード。まぐろ・チキン・サーモン3種。</div>
+        <div class="product-price">¥2,200 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%2B%25E3%2582%25A6%25E3%2582%25A7%25E3%2583%2583%25E3%2583%2588%25E3%2583%2595%25E3%2583%25BC%25E3%2583%2589%2B%25E7%25BC%25B6%25E8%25A9%25B0%2B24%25E7%25BC%25B6%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area" style="background:linear-gradient(135deg,#FFF8E8,#FFF0E8);">💧<div class="product-label lbl-food">健康管理</div></div>
+      <div class="product-info">
+        <div class="product-name">猫用 自動給水器 循環式フィルター付き</div>
+        <div class="product-desc">常に新鮮な水を循環。泌尿器病予防にも。静音設計で夜も安心。</div>
+        <div class="product-price">¥3,500 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%2B%25E8%2587%25AA%25E5%258B%2595%25E7%25B5%25A6%25E6%25B0%25B4%25E5%2599%25A8%2B%25E5%25BE%25AA%25E7%2592%25B0%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area" style="background:linear-gradient(135deg,#FFF8E8,#FFF0E8);">🍚</div>
+      <div class="product-info">
+        <div class="product-name">グレインフリー ドライフード 2kg</div>
+        <div class="product-desc">穀物不使用・高タンパク。アレルギーが心配な猫にもおすすめ。</div>
+        <div class="product-price">¥3,800 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%2B%25E3%2582%25B0%25E3%2583%25AC%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2595%25E3%2583%25AA%25E3%2583%25BC%2B%25E3%2583%2589%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2595%25E3%2583%25BC%25E3%2583%2589%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area" style="background:linear-gradient(135deg,#FFF8E8,#FFF0E8);">🥣</div>
+      <div class="product-info">
+        <div class="product-name">猫用 陶器フードボウル 2個セット（浅型）</div>
+        <div class="product-desc">ひげが当たりにくい浅型設計。洗いやすく衛生的な陶器素材。</div>
+        <div class="product-price">¥1,800 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%2B%25E3%2583%2595%25E3%2583%25BC%25E3%2583%2589%25E3%2583%259C%25E3%2582%25A6%25E3%2583%25AB%2B%25E9%2599%25B6%25E5%2599%25A8%2B%25E6%25B5%2585%25E5%259E%258B%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="cat-divider">🐾 🐱 🐾</div>
+<!-- ② トイレ -->
+<div id="toilet">
+  <div class="section-header fade-in">
+    <div class="section-emoji">🚽</div>
+    <div class="section-title-text">
+      <h2>トイレ・砂・消臭</h2>
+      <p>システムトイレ・猫砂・消臭グッズなどトイレ周りを快適に</p>
+    </div>
+    <span class="priority-badge">購入率 No.2</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="product-grid">
+    <div class="product-card fade-in">
+      <div class="product-img-area" style="background:linear-gradient(135deg,#E8F5FF,#F0F8FF);">🏠<div class="product-label lbl-toilet">定番</div></div>
+      <div class="product-info">
+        <div class="product-name">デオトイレ システムトイレ 本体セット</div>
+        <div class="product-desc">1週間脱臭！2層構造でニオイをしっかりキャッチ。掃除もラク。</div>
+        <div class="product-price">¥4,500 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2587%25E3%2582%25AA%25E3%2583%2588%25E3%2582%25A4%25E3%2583%25AC%2B%25E3%2582%25B7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%25A0%25E3%2583%2588%25E3%2582%25A4%25E3%2583%25AC%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area" style="background:linear-gradient(135deg,#E8F5FF,#F0F8FF);">⬜<div class="product-label lbl-toilet">人気</div></div>
+      <div class="product-info">
+        <div class="product-name">鉱物系猫砂 固まる砂 大容量 10L</div>
+        <div class="product-desc">しっかり固まってお掃除簡単！消臭効果が高い定番の鉱物系猫砂。</div>
+        <div class="product-price">¥1,200 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%25E7%25A0%2582%2B%25E9%2589%25B1%25E7%2589%25A9%25E7%25B3%25BB%2B%25E5%259B%25BA%25E3%2581%25BE%25E3%2582%258B%2B10L%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area" style="background:linear-gradient(135deg,#E8F5FF,#F0F8FF);">🌿</div>
+      <div class="product-info">
+        <div class="product-name">木製猫砂（ペレット）消臭力抜群 6L</div>
+        <div class="product-desc">天然木100%で安全。木の香りでアンモニア臭をしっかりカット。</div>
+        <div class="product-price">¥1,500 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%259C%25A8%25E8%25A3%25BD%25E7%258C%25AB%25E7%25A0%2582%2B%25E3%2583%259A%25E3%2583%25AC%25E3%2583%2583%25E3%2583%2588%2B%25E6%25B6%2588%25E8%2587%25AD%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area" style="background:linear-gradient(135deg,#E8F5FF,#F0F8FF);">🌸</div>
+      <div class="product-info">
+        <div class="product-name">ペット用 消臭スプレー 350ml 無香料</div>
+        <div class="product-desc">トイレ周りのニオイを瞬時に消臭。ペットに安全な天然成分使用。</div>
+        <div class="product-price">¥980 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%259A%25E3%2583%2583%25E3%2583%2588%2B%25E6%25B6%2588%25E8%2587%25AD%25E3%2582%25B9%25E3%2583%2597%25E3%2583%25AC%25E3%2583%25BC%2B%25E7%2584%25A1%25E9%25A6%2599%25E6%2596%2599%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="cat-divider">🐾 🐱 🐾</div>
+<!-- ③ キャリー -->
+<div id="carrier">
+  <div class="section-header fade-in">
+    <div class="section-emoji">🧳</div>
+    <div class="section-title-text">
+      <h2>キャリー・外出グッズ</h2>
+      <p>動物病院・外出に必須！キャリーバッグ・ハーネス・リード・迷子札など</p>
+    </div>
+    <span class="priority-badge">購入率 No.3</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="product-grid">
+    <div class="product-card fade-in">
+      <div class="product-img-area" style="background:linear-gradient(135deg,#F0FFE8,#E8FFF0);">🧺<div class="product-label lbl-room">必需品</div></div>
+      <div class="product-info">
+        <div class="product-name">猫用 ソフトキャリーバッグ 折りたたみ式</div>
+        <div class="product-desc">軽くて折りたたみOK。メッシュ窓で通気性抜群。機内持込可。</div>
+        <div class="product-price">¥4,200 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%2B%25E3%2582%25BD%25E3%2583%2595%25E3%2583%2588%25E3%2582%25AD%25E3%2583%25A3%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%2590%25E3%2583%2583%25E3%2582%25B0%2B%25E6%258A%2598%25E3%2582%258A%25E3%2581%259F%25E3%2581%259F%25E3%2581%25BF%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area" style="background:linear-gradient(135deg,#F0FFE8,#E8FFF0);">🏠</div>
+      <div class="product-info">
+        <div class="product-name">猫用 プラスチックキャリー 頑丈タイプ</div>
+        <div class="product-desc">頑丈で洗いやすい。動物病院の先生もすすめるスタンダードキャリー。</div>
+        <div class="product-price">¥3,800 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%2B%25E3%2583%2597%25E3%2583%25A9%25E3%2582%25B9%25E3%2583%2581%25E3%2583%2583%25E3%2582%25AF%25E3%2582%25AD%25E3%2583%25A3%25E3%2583%25AA%25E3%2583%25BC%2B%25E9%25A0%2581%25E4%25B8%2588%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area" style="background:linear-gradient(135deg,#F0FFE8,#E8FFF0);">🪢</div>
+      <div class="product-info">
+        <div class="product-name">猫用 ハーネス＋リードセット 脱走防止</div>
+        <div class="product-desc">フィット感抜群で抜けにくいH型ハーネス。散歩デビューにも。</div>
+        <div class="product-price">¥1,500 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%2B%25E3%2583%258F%25E3%2583%25BC%25E3%2583%258D%25E3%2582%25B9%2B%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%2589%25E3%2582%25BB%25E3%2583%2583%25E3%2583%2588%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area" style="background:linear-gradient(135deg,#F0FFE8,#E8FFF0);">🏷️</div>
+      <div class="product-info">
+        <div class="product-name">猫用 首輪 迷子札付き 安全バックル</div>
+        <div class="product-desc">引っ張ると外れる安全設計。QRコード迷子札で万が一も安心。</div>
+        <div class="product-price">¥1,200 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%2B%25E9%25A6%2596%25E8%25BC%25AA%2B%25E8%25BF%25B7%25E5%25AD%2590%25E6%259C%25AD%2B%25E5%25AE%2589%25E5%2585%25A8%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="cat-divider">🐾 🐱 🐾</div>
+<!-- ④ ベッド・部屋 -->
+<div id="bed">
+  <div class="section-header fade-in">
+    <div class="section-emoji">🏠</div>
+    <div class="section-title-text">
+      <h2>ベッド・キャットタワー・お部屋グッズ</h2>
+      <p>猫が快適に暮らせる空間づくり。キャットタワー・ベッド・爪とぎ・脱走防止ゲートなど</p>
+    </div>
+    <span class="priority-badge">購入率 No.4</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="product-grid">
+    <div class="product-card fade-in">
+      <div class="product-img-area" style="background:linear-gradient(135deg,#F0F8E8,#E8F5E8);">🗼<div class="product-label lbl-room">人気</div></div>
+      <div class="product-info">
+        <div class="product-name">キャットタワー 突っ張り型 高さ200cm</div>
+        <div class="product-desc">床から天井まで固定して安定。多頭飼いにも対応の大型タワー。</div>
+        <div class="product-price">¥8,800 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25AD%25E3%2583%25A3%25E3%2583%2583%25E3%2583%2588%25E3%2582%25BF%25E3%2583%25AF%25E3%2583%25BC%2B%25E7%25AA%2581%25E3%2581%25A3%25E5%25BC%25B5%25E3%2582%258A%2B200cm%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area" style="background:linear-gradient(135deg,#F0F8E8,#E8F5E8);">🛖<div class="product-label lbl-room">定番</div></div>
+      <div class="product-info">
+        <div class="product-name">猫用 ドーム型ベッド もこもこ素材 洗える</div>
+        <div class="product-desc">猫が好きな囲まれ感。洗えるカバー付きで清潔を保てる。</div>
+        <div class="product-price">¥3,200 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%2B%25E3%2583%2589%25E3%2583%25BC%25E3%2583%25A0%25E5%259E%258B%25E3%2583%2599%25E3%2583%2583%25E3%2583%2589%2B%25E3%2582%2582%25E3%2581%2593%25E3%2582%2582%25E3%2581%2593%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area" style="background:linear-gradient(135deg,#F0F8E8,#E8F5E8);">🪵</div>
+      <div class="product-info">
+        <div class="product-name">猫用 爪とぎポール 段ボール＋麻縄</div>
+        <div class="product-desc">壁や家具を守る！段ボールと麻縄のダブル爪とぎ。取り替え可能。</div>
+        <div class="product-price">¥1,980 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%2B%25E7%2588%25AA%25E3%2581%25A8%25E3%2581%258E%2B%25E3%2583%259D%25E3%2583%25BC%25E3%2583%25AB%2B%25E9%25BA%25BB%25E7%25B8%2584%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area" style="background:linear-gradient(135deg,#F0F8E8,#E8F5E8);">🚧</div>
+      <div class="product-info">
+        <div class="product-name">猫用 脱走防止ゲート 突っ張りタイプ</div>
+        <div class="product-desc">玄関・廊下への飛び出し防止。工事不要で賃貸にもOK。</div>
+        <div class="product-price">¥5,500 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%2B%25E8%2584%25B1%25E8%25B5%25B0%25E9%2598%25B2%25E6%25AD%25A2%25E3%2582%25B2%25E3%2583%25BC%25E3%2583%2588%2B%25E7%25AA%2581%25E3%2581%25A3%25E5%25BC%25B5%25E3%2582%258A%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area" style="background:linear-gradient(135deg,#F0F8E8,#E8F5E8);">🌡️</div>
+      <div class="product-info">
+        <div class="product-name">猫用 ホットカーペット 防水タイプ</div>
+        <div class="product-desc">洗えて防水。低温やけど防止設計。寒い時期の必需品。</div>
+        <div class="product-price">¥3,800 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%2B%25E3%2583%259B%25E3%2583%2583%25E3%2583%2588%25E3%2582%25AB%25E3%2583%25BC%25E3%2583%259A%25E3%2583%2583%25E3%2583%2588%2B%25E9%2598%25B2%25E6%25B0%25B4%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="cat-divider">🐾 🐱 🐾</div>
+<!-- ⑤ おもちゃ -->
+<div id="toy">
+  <div class="section-header fade-in">
+    <div class="section-emoji">🪀</div>
+    <div class="section-title-text">
+      <h2>おもちゃ・遊び・運動</h2>
+      <p>じゃらし・自動おもちゃ・トンネル・レーザーポインターなど運動不足解消グッズ</p>
+    </div>
+    <span class="priority-badge">購入率 No.5</span>
+    <div class="section-line"></div>
+  </div>
+  <div class="product-grid">
+    <div class="product-card fade-in">
+      <div class="product-img-area">🪶<div class="product-label lbl-default">人気</div></div>
+      <div class="product-info">
+        <div class="product-name">猫じゃらし 羽根＋ベル付き 3本セット</div>
+        <div class="product-desc">猫が夢中になる羽根とベルのじゃらし。丈夫な素材で長持ち。</div>
+        <div class="product-price">¥980 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%25E3%2581%2598%25E3%2582%2583%25E3%2582%2589%25E3%2581%2597%2B%25E7%25BE%25BD%25E6%25A0%25B9%2B%25E3%2583%2599%25E3%2583%25AB%2B3%25E6%259C%25AC%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area">🤖</div>
+      <div class="product-info">
+        <div class="product-name">自動猫じゃらし 電動 USB充電式</div>
+        <div class="product-desc">留守中も猫が退屈しない！不規則に動いて狩猟本能を刺激。</div>
+        <div class="product-price">¥2,500 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E8%2587%25AA%25E5%258B%2595%25E7%258C%25AB%25E3%2581%2598%25E3%2582%2583%25E3%2582%2589%25E3%2581%2597%2B%25E9%259B%25BB%25E5%258B%2595%2BUSB%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area">🌀</div>
+      <div class="product-info">
+        <div class="product-name">猫用 トンネルおもちゃ 折りたたみ式</div>
+        <div class="product-desc">くしゃくしゃ音が猫の興味をそそる！折りたたんでコンパクト収納。</div>
+        <div class="product-price">¥1,500 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%2B%25E3%2583%2588%25E3%2583%25B3%25E3%2583%258D%25E3%2583%25AB%2B%25E3%2581%258A%25E3%2582%2582%25E3%2581%25A1%25E3%2582%2583%2B%25E6%258A%2598%25E3%2582%258A%25E3%2581%259F%25E3%2581%259F%25E3%2581%25BF%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area">🔴</div>
+      <div class="product-info">
+        <div class="product-name">猫用 LEDレーザーポインター 多機能</div>
+        <div class="product-desc">UV・白色LEDも搭載の多機能タイプ。ボタン電池式で軽量。</div>
+        <div class="product-price">¥800 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%2B%25E3%2583%25AC%25E3%2583%25BC%25E3%2582%25B6%25E3%2583%25BC%25E3%2583%259D%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25BF%25E3%2583%25BC%2B%25E5%25A4%259A%25E6%25A9%259F%25E8%2583%25BD%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="cat-divider">🐾 🐱 🐾</div>
+<!-- ⑥ 猫の服 -->
+<div id="clothes">
+  <div class="section-header fade-in">
+    <div class="section-emoji">👗</div>
+    <div class="section-title-text">
+      <h2>猫の服・コスチューム</h2>
+      <p>普段着・パジャマ・コスプレ・術後服まで猫のおしゃれをサポート</p>
+    </div>
+    <div class="section-line"></div>
+  </div>
+  <div class="product-grid">
+    <div class="product-card fade-in">
+      <div class="product-img-area" style="background:linear-gradient(135deg,#FFF0F5,#FFE8F0);">👘<div class="product-label lbl-clothes">人気</div></div>
+      <div class="product-info">
+        <div class="product-name">猫用 ニットセーター 伸縮素材 S〜XL</div>
+        <div class="product-desc">着せやすい伸縮ニット。秋冬の防寒に。デザインも豊富でおしゃれ。</div>
+        <div class="product-price">¥1,800 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%2B%25E3%2582%25BB%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%25BC%2B%25E3%2583%258B%25E3%2583%2583%25E3%2583%2588%2B%25E9%2598%25B2%25E5%25AF%2592%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area" style="background:linear-gradient(135deg,#FFF0F5,#FFE8F0);">🎃<div class="product-label lbl-clothes">コスプレ</div></div>
+      <div class="product-info">
+        <div class="product-name">猫用 コスプレ衣装 ライオン・サメ・かぼちゃ</div>
+        <div class="product-desc">SNSで話題！思わず笑えるかわいいコスプレ衣装セット。</div>
+        <div class="product-price">¥1,200 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%2B%25E3%2582%25B3%25E3%2582%25B9%25E3%2583%2597%25E3%2583%25AC%2B%25E8%25A1%25A3%25E8%25A3%2585%2B%25E3%2583%25A9%25E3%2582%25A4%25E3%2582%25AA%25E3%2583%25B3%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area" style="background:linear-gradient(135deg,#FFF0F5,#FFE8F0);">🩺<div class="product-label lbl-clothes">術後ケア</div></div>
+      <div class="product-info">
+        <div class="product-name">猫用 術後服 エリザベスカラー代替 伸縮</div>
+        <div class="product-desc">手術・去勢後の傷口を保護。エリザベスカラーよりストレス少ない。</div>
+        <div class="product-price">¥1,500 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%2B%25E8%25A1%2593%25E5%25BE%258C%25E6%259C%258D%2B%25E3%2582%25A8%25E3%2583%25AA%25E3%2582%25B6%25E3%2583%2599%25E3%2582%25B9%25E3%2582%25AB%25E3%2583%25A9%25E3%2583%25BC%2B%25E4%25BB%25A3%25E6%259B%25BF%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area" style="background:linear-gradient(135deg,#FFF0F5,#FFE8F0);">🧥</div>
+      <div class="product-info">
+        <div class="product-name">猫用 パーカー 裏起毛 前ファスナー付き</div>
+        <div class="product-desc">前ファスナーで着せやすい。裏起毛であたたかく、肌触りも◎。</div>
+        <div class="product-price">¥2,200 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%2B%25E3%2583%2591%25E3%2583%25BC%25E3%2582%25AB%25E3%2583%25BC%2B%25E8%25A3%258F%25E8%25B5%25B7%25E6%25AF%259B%2B%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25B9%25E3%2583%258A%25E3%2583%25BC%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="cat-divider">🐾 🐱 🐾</div>
+<!-- ⑦ ヘルスケア -->
+<div id="health">
+  <div class="section-header fade-in">
+    <div class="section-emoji">💊</div>
+    <div class="section-title-text">
+      <h2>ヘルスケア・グルーミング</h2>
+      <p>爪切り・ブラシ・サプリメント・歯ブラシなど猫の健康を守るアイテム</p>
+    </div>
+    <div class="section-line"></div>
+  </div>
+  <div class="product-grid">
+    <div class="product-card fade-in">
+      <div class="product-img-area" style="background:linear-gradient(135deg,#E0F7F7,#F0FFF0);">✂️<div class="product-label lbl-health">必需品</div></div>
+      <div class="product-info">
+        <div class="product-name">猫用 爪切り ギロチンタイプ 安全ガード付き</div>
+        <div class="product-desc">ステンレス刃で切れ味抜群。初心者でも使いやすい安全ガード付き。</div>
+        <div class="product-price">¥1,200 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%2B%25E7%2588%25AA%25E5%2588%2587%25E3%2582%258A%2B%25E3%2582%25AE%25E3%2583%25AD%25E3%2583%2581%25E3%2583%25B3%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area" style="background:linear-gradient(135deg,#E0F7F7,#F0FFF0);">🪮<div class="product-label lbl-health">おすすめ</div></div>
+      <div class="product-info">
+        <div class="product-name">猫用 自動クリーニングブラシ スリッカー</div>
+        <div class="product-desc">ボタンひとつで毛が取れる！長毛・短毛どちらにも使えるブラシ。</div>
+        <div class="product-price">¥1,980 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%2B%25E3%2582%25B0%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%25A9%25E3%2583%25B3%25E3%2582%25B0%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2B%25E3%2582%25BB%25E3%2583%25AB%25E3%2583%2595%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%258B%25E3%2583%25B3%25E3%2582%25B0%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area" style="background:linear-gradient(135deg,#E0F7F7,#F0FFF0);">💊</div>
+      <div class="product-info">
+        <div class="product-name">猫用 マルチビタミン サプリメント 粉末</div>
+        <div class="product-desc">毛並み・関節・免疫をサポート。ちゅーるに混ぜてあげやすい。</div>
+        <div class="product-price">¥2,800 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%2B%25E3%2582%25B5%25E3%2583%2597%25E3%2583%25AA%25E3%2583%25A1%25E3%2583%25B3%25E3%2583%2588%2B%25E3%2583%2593%25E3%2582%25BF%25E3%2583%259F%25E3%2583%25B3%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area" style="background:linear-gradient(135deg,#E0F7F7,#F0FFF0);">🦷</div>
+      <div class="product-info">
+        <div class="product-name">猫用 歯ブラシ＋歯磨きジェルセット</div>
+        <div class="product-desc">歯周病・口臭予防に。鶏肉フレーバーで嫌がりにくい設計。</div>
+        <div class="product-price">¥1,500 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%2B%25E6%25AD%25AF%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2B%25E6%25AD%25AF%25E7%25A3%25A8%25E3%2581%258D%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25AB%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="cat-divider">🐾 🐱 🐾</div>
+<!-- ⑧ 雑貨 -->
+<div id="goods">
+  <div class="section-header fade-in">
+    <div class="section-emoji">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="18" cy="26" rx="12" ry="9" fill="#F5C89A"/>
+        <circle cx="18" cy="16" r="11" fill="#F5C89A"/>
+        <polygon points="9,9 6,2 14,8" fill="#F5C89A"/><polygon points="9,9 7,3 13,8" fill="#FFB7C5"/>
+        <polygon points="27,9 30,2 22,8" fill="#F5C89A"/><polygon points="27,9 29,3 23,8" fill="#FFB7C5"/>
+        <circle cx="14" cy="15" r="3" fill="white"/><circle cx="22" cy="15" r="3" fill="white"/>
+        <circle cx="14" cy="15" r="1.8" fill="#3D4A8A"/><circle cx="22" cy="15" r="1.8" fill="#3D4A8A"/>
+        <circle cx="14.6" cy="14.4" r="0.7" fill="white"/><circle cx="22.6" cy="14.4" r="0.7" fill="white"/>
+        <ellipse cx="18" cy="19" rx="1.2" ry="0.9" fill="#FF9EB5"/>
+        <path d="M18 20 Q16 22 14.5 21.5" stroke="#8B6F5E" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+        <path d="M18 20 Q20 22 21.5 21.5" stroke="#8B6F5E" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+        <line x1="8" y1="18" x2="14" y2="19" stroke="#8B6F5E" stroke-width="0.6" opacity="0.5"/>
+        <line x1="22" y1="19" x2="28" y2="18" stroke="#8B6F5E" stroke-width="0.6" opacity="0.5"/>
+        <path d="M28 28 Q33 24 31 31" stroke="#F5C89A" stroke-width="3" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="section-title-text">
+      <h2>猫グッズ・雑貨・インテリア</h2>
+      <p>ぬいぐるみ・マグカップ・トートバッグ・ウォールステッカーなど猫モチーフのかわいいアイテム</p>
+    </div>
+    <div class="section-line"></div>
+  </div>
+  <div class="product-grid">
+    <div class="product-card fade-in">
+      <div class="product-img-area">
+        <svg width="120" height="120" viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="65" cy="85" rx="42" ry="36" fill="#F5C89A"/>
+          <circle cx="65" cy="52" r="32" fill="#F5C89A"/>
+          <polygon points="36,28 28,8 52,22" fill="#F5C89A"/><polygon points="38,26 32,12 50,22" fill="#FFB7C5"/>
+          <polygon points="94,28 102,8 78,22" fill="#F5C89A"/><polygon points="92,26 98,12 80,22" fill="#FFB7C5"/>
+          <circle cx="53" cy="50" r="8" fill="white"/><circle cx="77" cy="50" r="8" fill="white"/>
+          <circle cx="54" cy="51" r="5" fill="#4A90D9"/><circle cx="78" cy="51" r="5" fill="#4A90D9"/>
+          <circle cx="54" cy="51" r="2.5" fill="#1a1a2e"/><circle cx="78" cy="51" r="2.5" fill="#1a1a2e"/>
+          <circle cx="56" cy="49" r="1.2" fill="white"/><circle cx="80" cy="49" r="1.2" fill="white"/>
+          <ellipse cx="65" cy="60" rx="3" ry="2" fill="#FF9EB5"/>
+          <path d="M65 62 Q60 67 57 65" stroke="#8B6F5E" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <path d="M65 62 Q70 67 73 65" stroke="#8B6F5E" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <line x1="44" y1="59" x2="60" y2="61" stroke="#8B6F5E" stroke-width="1" opacity="0.6"/>
+          <line x1="42" y1="63" x2="60" y2="63" stroke="#8B6F5E" stroke-width="1" opacity="0.6"/>
+          <line x1="86" y1="59" x2="70" y2="61" stroke="#8B6F5E" stroke-width="1" opacity="0.6"/>
+          <line x1="88" y1="63" x2="70" y2="63" stroke="#8B6F5E" stroke-width="1" opacity="0.6"/>
+          <path d="M107 100 Q125 85 118 108 Q112 118 100 112" stroke="#F5C89A" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <ellipse cx="45" cy="114" rx="13" ry="9" fill="#F5C89A"/>
+          <ellipse cx="85" cy="114" rx="13" ry="9" fill="#F5C89A"/>
+        </svg>
+        <div class="product-label lbl-default">人気No.1</div>
+      </div>
+      <div class="product-info">
+        <div class="product-name">ねこぬいぐるみ リアル猫シリーズ（L）</div>
+        <div class="product-desc">本物そっくりのリアルな毛並みが人気！贈り物にも最適。</div>
+        <div class="product-price">¥2,980 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2581%25AD%25E3%2581%2593%2B%25E3%2581%25AC%25E3%2581%2584%25E3%2581%2590%25E3%2582%258B%25E3%2581%25BF%2B%25E3%2583%25AA%25E3%2582%25A2%25E3%2583%25AB%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area">
+        <svg width="100" height="100" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="18" y="45" width="60" height="50" rx="8" fill="#C5C7F0"/>
+          <rect x="22" y="49" width="52" height="42" rx="6" fill="#E8E9FF"/>
+          <path d="M78 55 Q100 55 100 70 Q100 85 78 82" stroke="#C5C7F0" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <circle cx="48" cy="72" r="18" fill="#F5C89A"/>
+          <polygon points="35,58 30,46 43,55" fill="#F5C89A"/><polygon points="61,58 66,46 53,55" fill="#F5C89A"/>
+          <polygon points="36,57 32,48 42,55" fill="#FFB7C5"/><polygon points="60,57 64,48 54,55" fill="#FFB7C5"/>
+          <circle cx="42" cy="70" r="4" fill="white"/><circle cx="54" cy="70" r="4" fill="white"/>
+          <circle cx="42" cy="71" r="2.5" fill="#3D4A8A"/><circle cx="54" cy="71" r="2.5" fill="#3D4A8A"/>
+          <ellipse cx="48" cy="76" rx="2" ry="1.5" fill="#FF9EB5"/>
+          <path d="M30 42 Q33 36 30 30" stroke="#8B8FD4" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5"/>
+          <path d="M48 40 Q51 34 48 28" stroke="#8B8FD4" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5"/>
+        </svg>
+        <div class="product-label lbl-default">新着</div>
+      </div>
+      <div class="product-info">
+        <div class="product-name">猫型 陶器マグカップ（しっぽ付き）</div>
+        <div class="product-desc">しっぽが取っ手のユニークデザイン。毎朝が楽しくなる一品。</div>
+        <div class="product-price">¥1,580 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%2B%25E3%2583%259E%25E3%2582%25B0%25E3%2582%25AB%25E3%2583%2583%25E3%2583%2597%2B%25E9%2599%25B6%25E5%2599%25A8%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area">
+        <svg width="100" height="110" viewBox="0 0 110 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="15" y="45" width="80" height="65" rx="10" fill="#C5C7F0"/>
+          <rect x="20" y="50" width="70" height="55" rx="8" fill="#E8E9FF"/>
+          <path d="M35 45 Q35 25 55 25 Q75 25 75 45" stroke="#8B8FD4" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <polygon points="18,46 10,28 30,40" fill="#C5C7F0"/><polygon points="92,46 100,28 80,40" fill="#C5C7F0"/>
+          <polygon points="19,45 13,31 29,41" fill="#FFB7C5"/><polygon points="91,45 97,31 81,41" fill="#FFB7C5"/>
+          <circle cx="55" cy="78" r="20" fill="#F5C89A"/>
+          <circle cx="48" cy="75" r="4" fill="white"/><circle cx="62" cy="75" r="4" fill="white"/>
+          <circle cx="48" cy="76" r="2.5" fill="#3D4A8A"/><circle cx="62" cy="76" r="2.5" fill="#3D4A8A"/>
+          <ellipse cx="55" cy="81" rx="2" ry="1.5" fill="#FF9EB5"/>
+        </svg>
+      </div>
+      <div class="product-info">
+        <div class="product-name">猫耳トートバッグ キャンバス素材</div>
+        <div class="product-desc">耳付きでインパクト大！軽くて丈夫なキャンバスエコバッグ。</div>
+        <div class="product-price">¥1,480 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%25E8%2580%25B3%2B%25E3%2583%2588%25E3%2583%25BC%25E3%2583%2588%25E3%2583%2590%25E3%2583%2583%25E3%2582%25B0%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area">
+        <svg width="110" height="110" viewBox="0 0 120 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="15" width="104" height="90" rx="8" fill="#F0F0FF" opacity="0.5"/>
+          <ellipse cx="45" cy="80" rx="22" ry="18" fill="#3D4A8A" opacity="0.85"/>
+          <circle cx="45" cy="62" r="18" fill="#3D4A8A" opacity="0.85"/>
+          <polygon points="31,50 25,36 40,50" fill="#3D4A8A" opacity="0.85"/>
+          <polygon points="59,50 65,36 50,50" fill="#3D4A8A" opacity="0.85"/>
+          <path d="M65 75 Q80 65 76 85" stroke="#3D4A8A" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.85"/>
+          <ellipse cx="90" cy="60" rx="13" ry="10" fill="#8B8FD4" opacity="0.7"/>
+          <circle cx="90" cy="50" r="10" fill="#8B8FD4" opacity="0.7"/>
+          <polygon points="83,43 79,34 87,43" fill="#8B8FD4" opacity="0.7"/>
+          <polygon points="97,43 101,34 93,43" fill="#8B8FD4" opacity="0.7"/>
+          <circle cx="28" cy="100" r="5" fill="#FF9EB5" opacity="0.6"/>
+          <circle cx="23" cy="93" r="2.5" fill="#FF9EB5" opacity="0.6"/>
+          <circle cx="29" cy="91" r="2.5" fill="#FF9EB5" opacity="0.6"/>
+          <circle cx="35" cy="93" r="2.5" fill="#FF9EB5" opacity="0.6"/>
+        </svg>
+      </div>
+      <div class="product-info">
+        <div class="product-name">猫柄 ウォールステッカー インテリア</div>
+        <div class="product-desc">貼ってはがせるタイプ。猫のシルエットで部屋がおしゃれに。</div>
+        <div class="product-price">¥680 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%2B%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%25BC%25E3%2583%25AB%25E3%2582%25B9%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AB%25E3%2583%25BC%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area">🖼️</div>
+      <div class="product-info">
+        <div class="product-name">猫柄 手帳・スケジュール帳 2025年</div>
+        <div class="product-desc">毎日使いたくなる猫柄手帳。週間・月間レイアウト両対応。</div>
+        <div class="product-price">¥1,100 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%258C%25AB%2B%25E6%2589%258B%25E5%25B8%25B3%2B%25E3%2582%25B9%25E3%2582%25B1%25E3%2582%25B8%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%25AB%2B2025%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+    <div class="product-card fade-in">
+      <div class="product-img-area">📸</div>
+      <div class="product-info">
+        <div class="product-name">猫写真 フォトフレーム 壁掛け 3枚セット</div>
+        <div class="product-desc">愛猫の写真を飾れる木製フレーム。ナチュラルなインテリアに。</div>
+        <div class="product-price">¥2,200 <span>〜</span></div>
+      </div>
+      <div class="btn-group">
+        <a class="btn-buy btn-rakuten" style="flex:1;width:100%" href="https://hb.afl.rakuten.co.jp/hgc/0ef704ca.d0831a99.0ef704cb.c5f7f158/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2595%25E3%2582%25A9%25E3%2583%2588%25E3%2583%2595%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%25A0%2B%25E5%25A3%2581%25E6%258E%259B%25E3%2581%2591%2B3%25E6%259E%259A%25E3%2582%25BB%25E3%2583%2483%25E3%2583%2588%2B%25E6%259C%25A8%25E8%25A3%25BD%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" rel="nofollow sponsored noopener" target="_blank">🛒 楽天</a>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+<footer>
+  <p>🐱 ねこ STORE — 猫グッズ専門紹介サイト</p>
+  <p style="margin-top:0.5rem;">各商品リンクは <a href="https://www.rakuten.co.jp" target="_blank">楽天市場</a> の検索ページへ遷移します。</p>
+  <p style="margin-top:0.25rem; font-size:0.65rem; opacity:0.5;">価格は目安です。実際の価格は各ショッピングサイトでご確認ください。</p>
+</footer>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 60);
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  const ids = ['food','toilet','carrier','bed','toy','clothes','health','goods'];
+  function goTo(id) {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.querySelectorAll('.nav-tab').forEach((t, i) => {
+      t.classList.toggle('active', ids[i] === id);
+    });
+  }
+  window.addEventListener('scroll', () => {
+    const tabs = document.querySelectorAll('.nav-tab');
+    let current = ids[0];
+    ids.forEach(id => {
+      const el = document.getElementById(id);
+      if (el && el.getBoundingClientRect().top < 130) current = id;
+    });
+    tabs.forEach((t, i) => t.classList.toggle('active', ids[i] === current));
+  });
+</script>
+</body>
+</html>
